@@ -10,6 +10,12 @@ import VueRepository from '@/springboot/secondary/client/VueRepository';
 import SpringBootRepository from './springboot/secondary/SpringBootRepository';
 import ConsoleLogger from '@/common/secondary/ConsoleLogger';
 
+import { Quasar } from 'quasar';
+// Import icon libraries
+import '@quasar/extras/material-icons/material-icons.css';
+// Import Quasar css
+import 'quasar/src/css/index.sass';
+
 const axiosHttp = new AxiosHttp(axios.create({ baseURL: '' }));
 const consoleLogger = new ConsoleLogger(console);
 const projectRepository = new ProjectRepository(axiosHttp);
@@ -26,5 +32,9 @@ app.provide('reactService', reactRepository);
 app.provide('springBootService', springBootRepository);
 app.provide('vueService', vueRepository);
 app.use(router);
+
+app.use(Quasar, {
+  config: {},
+});
 
 app.mount('#app');
