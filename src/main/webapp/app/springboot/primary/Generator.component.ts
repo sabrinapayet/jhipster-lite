@@ -30,6 +30,9 @@ export default defineComponent({
     const build = ref<string>('');
     const language = ref<string>('');
     const expanded = ref<boolean>(false);
+    const theme = ref<boolean>(false);
+    const tab = ref<string>('init');
+    const splitterModel = ref<number>(20);
 
     const initProject = async (): Promise<void> => {
       if (project.value.folder !== '') {
@@ -130,6 +133,9 @@ export default defineComponent({
       build,
       language,
       expanded,
+      theme,
+      tab,
+      splitterModel,
     };
   },
 });
