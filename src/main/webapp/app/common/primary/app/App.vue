@@ -1,7 +1,9 @@
 <template src="./App.html"></template>
 
 <script lang="ts" src="./App.component.ts"></script>
-<style>
+
+<!-- <style>
+
 :root {
   box-sizing: border-box;
   --bg-color-slate: #f1f5f9;
@@ -397,4 +399,4 @@ h2.card-header,
     padding-right: 1.5rem;
   }
 }
-</style>
+</style>-->

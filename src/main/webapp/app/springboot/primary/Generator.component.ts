@@ -25,6 +25,12 @@ export default defineComponent({
     const isReactWithStyle = ref<boolean>(false);
     const isVueWithStyle = ref<boolean>(false);
 
+    const client = ref<string>('');
+    const server = ref<string>('');
+    const build = ref<string>('');
+    const language = ref<string>('');
+    const expanded = ref<boolean>(false);
+
     const initProject = async (): Promise<void> => {
       if (project.value.folder !== '') {
         await projectService.init(toProject(project.value)).catch(error => logger.error('Project initialization failed', error));
@@ -119,6 +125,11 @@ export default defineComponent({
       addReact,
       addVue,
       addFrontendMavenPlugin,
+      client,
+      server,
+      build,
+      language,
+      expanded,
     };
   },
 });
