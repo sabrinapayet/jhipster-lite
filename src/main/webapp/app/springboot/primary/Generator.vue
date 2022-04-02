@@ -34,11 +34,11 @@
               <q-separator color="secondary" insert />
 
               <q-card-section>
-                <q-input v-model="text" label="Path (required)" />
-                <q-input v-model="text" label="Project name" />
-                <q-input v-model="text" label="Base name" />
-                <q-input v-model="text" label="Package name" />
-                <q-input v-model="text" label="Server port" />
+                <q-input v-model="text" id="path" label="Path (required)" />
+                <q-input v-model="text" id="basename" label="Base name" />
+                <q-input v-model="text" id="projectname" label="Project name" />
+                <q-input v-model="text" id="packagename" label="Package name" />
+                <q-input v-model="text" id="serverport" label="Server port" />
               </q-card-section>
             </q-card>
           </div>
@@ -238,10 +238,10 @@
           <q-splitter v-model="splitterModel">
             <template v-slot:before>
               <q-tabs v-model="tab" vertical class="text-teal">
-                <q-tab class="text-secondary" name="initialization" icon="mail" label="Initialization" />
-                <q-tab class="text-spring" name="spring" icon="alarm" label="Spring Boot" />
-                <q-tab class="text-vue" name="vue" icon="movie" label="Vue" />
-                <q-tab class="text-angular" name="angular" icon="movie" label="Angular" />
+                <q-tab class="text-secondary" name="initialization" icon="fa-solid fa-trowel-bricks" label="Initialization" />
+                <q-tab class="text-spring" name="spring" icon="fa-solid fa-leaf" label="Spring Boot" />
+                <q-tab class="text-vue" name="vue" icon="fa-brands fa-vuejs" label="Vue" />
+                <q-tab class="text-angular" name="angular" icon="fa-brands fa-angular" label="Angular" />
               </q-tabs>
             </template>
 
@@ -260,7 +260,7 @@
                         </q-item-section>
                         <q-item-section top side>
                           <div class="text-grey-8 q-gutter-xs">
-                            <q-btn class="glossy" align="between" size="md" color="primary" icon="engineering"> Generate </q-btn>
+                            <q-btn id="init" class="glossy" align="between" size="md" color="primary" icon="engineering"> Generate </q-btn>
                           </div>
                         </q-item-section>
                       </q-item>
@@ -273,7 +273,7 @@
                         </q-item-section>
                         <q-item-section top side>
                           <div class="text-grey-8 q-gutter-xs">
-                            <q-btn class="glossy" align="between" size="md" color="primary" icon="engineering"> Generate </q-btn>
+                            <q-btn id="maven" class="glossy" align="between" size="md" color="primary" icon="engineering"> Generate </q-btn>
                           </div>
                         </q-item-section>
                       </q-item>
@@ -286,7 +286,9 @@
                         </q-item-section>
                         <q-item-section top side>
                           <div class="text-grey-8 q-gutter-xs">
-                            <q-btn class="glossy" align="between" size="md" color="primary" icon="engineering"> Generate </q-btn>
+                            <q-btn id="javabase" class="glossy" align="between" size="md" color="primary" icon="engineering">
+                              Generate
+                            </q-btn>
                           </div>
                         </q-item-section>
                       </q-item>
