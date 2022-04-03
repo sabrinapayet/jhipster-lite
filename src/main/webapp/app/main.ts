@@ -11,6 +11,7 @@ import SpringBootRepository from './springboot/secondary/SpringBootRepository';
 import ConsoleLogger from '@/common/secondary/ConsoleLogger';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap';
 
 const axiosHttp = new AxiosHttp(axios.create({ baseURL: '' }));
